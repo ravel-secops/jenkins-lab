@@ -14,7 +14,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                echo "Iniciando build de ${APP_NAME} versão ${VERSION}"
+                echo "Iniciando o build de ${APP_NAME} versão ${VERSION}"
                 echo "Executando no agente: ${env.NODE_NAME}"
             }
         }
