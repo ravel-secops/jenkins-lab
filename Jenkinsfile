@@ -66,7 +66,7 @@ pipeline {
             archiveArtifacts artifacts: 'build/*.tar.gz', allowEmptyArchive: true
         }
         success {
-            echo "Buildd #${BUILD_NUMBER} concluído com sucesso!"
+            echo "Build #${BUILD_NUMBER} concluído com sucesso!"
         }
         failure {
             echo "Build #${BUILD_NUMBER} falhou. Verifique os logs."
