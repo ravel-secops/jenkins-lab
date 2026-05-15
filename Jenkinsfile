@@ -32,7 +32,7 @@ pipeline {
                     whoami
                     ls -lah ../
                     echo "Teste 001 CD"
-                    cd 'Teste 001'
+                    cd "../Teste 001"
                     ls -lah
                     echo "binário simulado" > build/app.bin
                     sleep 2
