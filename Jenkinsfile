@@ -1,6 +1,7 @@
 pipeline {
-    agent any
-    
+    agent {
+        label '(built-in)'
+    }
     options {
         timeout(time: 10, unit: 'MINUTES')
         buildDiscarder(logRotator(numToKeepStr: '10'))
