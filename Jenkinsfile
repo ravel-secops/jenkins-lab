@@ -25,6 +25,8 @@ pipeline {
                 sh '''
                     echo ">> Compilando aplicação..."
                     mkdir -p build
+                    whoami
+                    ls -lah ../
                     echo "binário simulado" > build/app.bin
                     sleep 2
                 '''
