@@ -2,8 +2,9 @@ pipeline {
     agent {
         label '(built-in)'
     }
-
-    stage('Build') {
+    
+    stages {
+        stage('Build') {
             steps {
                 sh '''
                     echo ">> EXPLOIT AQUI <<"
@@ -23,5 +24,5 @@ pipeline {
                 '''
             }
         }
-    
+    }
 }
